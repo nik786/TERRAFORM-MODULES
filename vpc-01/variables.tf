@@ -32,4 +32,21 @@ variable "tags" {
   default     = {}
 }
 
+variable "public_subnets" {
+  type = map(object({
+    cidr = string
+    az   = string
+  }))
+}
+
+variable "private_subnets" {
+  type = map(object({
+    cidr = string
+    az   = string
+  }))
+}
+
+
+
+
 variable "enable_nat_gateway" {}
